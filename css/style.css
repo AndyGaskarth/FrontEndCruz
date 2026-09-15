@@ -1,0 +1,80 @@
+.nav {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    border-color: black;
+    text-align: center;
+    background-color: rgba(0, 183, 255, 0.651);
+}
+
+.nav a {
+    font-size: 28px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+header.nav {
+    display: flex;
+    justify-content: space-between; /* Joga um item para cada ponta (esquerda e direita) */
+    align-items: center;            /* Alinha os dois perfeitamente no centro na vertical */
+    padding: 0 20px;                /* Um respiro lateral opcional */
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+main section {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+main img {
+    justify-content: space-between;
+    align-items: center;
+}
+
+main h2 {
+    font-size: 28px;
+}
+
+main p {
+    font-size: 20px;
+
+}
+
+fieldset {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#sobre {
+    align-items: center;
+    padding: 0 20px;
+}
+
+#contato table td{
+    align-items: center;
+    padding: 10px 15px 0px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+}
+
+#contato a{
+    text-decoration: none;
+    color: #333;
+}
+
+#contato a:hover {
+    color: blue;
+    text-decoration: underline;
+}
