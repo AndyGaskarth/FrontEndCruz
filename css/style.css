@@ -1,12 +1,6 @@
-.nav {
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 2px;
-    border-color: black;
-    text-align: center;
-    background-color: rgba(0, 183, 255, 0.651);
+* {
+    box-sizing: border-box;
 }
-
 .nav a {
     font-size: 28px;
     color: #333;
@@ -19,11 +13,14 @@
 }
 
 header.nav {
+    width: 100%;
+    background-color: rgba(0, 183, 255, 0.651);
     display: flex;
     justify-content: space-between; /* Joga um item para cada ponta (esquerda e direita) */
     align-items: center;            /* Alinha os dois perfeitamente no centro na vertical */
     padding: 0 20px;                /* Um respiro lateral opcional */
-    border-bottom: 2px solid #ddd;
+    border-bottom: 3px solid black; /* Altera o tamanho e cor apenas da borda inferior  */
+    border-radius: 6px;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
@@ -31,16 +28,23 @@ header.nav {
 main section {
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 main img {
     justify-content: space-between;
     align-items: center;
 }
 
+main h1 {
+    text-align: center;
+    font-size: 52px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 main h2 {
     font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main p {
@@ -57,13 +61,30 @@ fieldset {
 
 
 #sobre {
+    text-align: center;
     align-items: center;
     padding: 0 20px;
 }
 
+#sobre h2{
+    background-color: rgba(0, 183, 255, 0.651);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+#contato{ 
+    box-sizing: border-box;
+    padding: 0 20px;
+    background-color:rgb(250, 245, 245);
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
 #contato table td{
     align-items: center;
-    padding: 10px 15px 0px 10px;
+    padding: 14px 20px 0 14px;
     border: 1px solid #ddd;
     border-radius: 3px;
 
@@ -77,4 +98,59 @@ fieldset {
 #contato a:hover {
     color: blue;
     text-decoration: underline;
+}
+
+/* Transforma o container em Flexbox (coloca o texto e a tabela lado a lado) */
+.contato-container {
+    display: flex;
+    align-items: center; /* Alinha ambos verticalmente no centro */
+    gap: 20px;           /* Cria um espaço elegante entre o texto e a tabela */
+    flex-wrap: wrap;     /* Responsividade: se a tela for menor, a tabela cai para baixo automaticamente */
+}
+
+/* Garante que o texto e a tabela dividam bem o espaço em telas grandes */
+.contato-container p,
+.contato-container table {
+    flex: 1;             /* Faz com que ambos ocupem proporções flexíveis */
+    min-width: 280px;    /* Evita que fiquem espremidos em telas de celular */
+}
+
+#projetos-atuais {
+    background-color: rgb(250, 245, 245);
+    font-size: 28px;
+    padding: 0 20px 0;
+}
+
+#projetos-atuais h2{
+    text-align: center;
+}
+
+#voluntariado {
+    padding: 0 20px 0;
+    font-size: 28px;
+}
+
+#voluntariado h2{
+    text-align: center;
+}
+
+#voluntariado li{
+    font-size: 20px;
+}
+
+#doacoes {
+    background-color: rgb(250, 245, 245);
+    font-size: 28px;
+    padding: 0 20px 0;
+}
+
+#doacoes h2{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgb(20, 19, 19);
+    
 }
