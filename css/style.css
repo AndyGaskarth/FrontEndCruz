@@ -16,13 +16,28 @@ header.nav {
     width: 100%;
     background-color: rgba(0, 183, 255, 0.651);
     display: flex;
-    justify-content: space-between; /* Joga um item para cada ponta (esquerda e direita) */
-    align-items: center;            /* Alinha os dois perfeitamente no centro na vertical */
-    padding: 0 20px;                /* Um respiro lateral opcional */
-    border-bottom: 3px solid black; /* Altera o tamanho e cor apenas da borda inferior  */
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 0 20px;                
+    border-bottom: 3px solid black; 
     border-radius: 6px;
     padding-bottom: 15px;
     margin-bottom: 20px;
+}
+
+#btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 20px;
+    padding: 20px;
 }
 
 main section {
@@ -30,7 +45,115 @@ main section {
     border-radius: 6px;
     padding: 10px;
     margin-bottom: 10px;
+    grid-column: span 12;
 }
+@media (max-width: 768px) {
+    /* Mantém o cabeçalho em linha (horizontal) para colocar o texto e o botão lado a lado */
+    header.nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que o menu que caia embaixo ocupe a linha inteira */
+        padding: 15px 20px;
+    }
+
+    /* Reduz um pouco o tamanho do título no celular para caber confortavelmente ao lado do botão */
+    header.nav h1 {
+        font-size: 22px; 
+    }
+
+    /* Mostra o botão e o posiciona na ponta direita */
+    #btn-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    /* Esconde o menu de navegação por padrão, fazendo-o ocupar 100% da linha de baixo ao abrir */
+    #menu-opcoes {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 10px;
+    }
+
+    /* Quando ativado pelo JavaScript, exibe o menu abaixo do cabeçalho */
+    #menu-opcoes.ativo {
+        display: flex;
+    }
+}
+@media (max-width: 480px) {
+    main {
+        padding: 5px;
+    }
+    header.nav {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #menu-opcoes{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #menu-opcoes.ativo{
+        display: flex;
+    }
+}
+
+/* 2. Dispositivos Móveis / Tablets em Retrato (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+    }
+    header.nav {
+        flex-wrap: wrap;
+    }
+    #btn-menu {
+        display: block;
+    }
+    #menu-opcoes{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #menu-opcoes.ativo{
+        display: flex;
+    }
+}
+
+/* 3. Tablets em Paisagem / Laptops Pequenos (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #sobre {
+        grid-column: span 6; /* Ocupa metade do grid (6 colunas) */
+    }
+}
+
+/* 4. Desktops Padrão (1025px a 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* 5. Desktops Panorâmicos / Telas Ultra-Wide (acima de 1441px) */
+@media (min-width: 1441px) {
+    main {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
+
 main img {
     justify-content: space-between;
     align-items: center;
@@ -59,6 +182,11 @@ fieldset {
     align-items: center;
 }
 
+.frentes-atuais {
+    grid-column: span 12; 
+    text-align: center;   
+    margin-bottom: 20px;  
+}
 
 #sobre {
     text-align: center;
@@ -100,19 +228,19 @@ fieldset {
     text-decoration: underline;
 }
 
-/* Transforma o container em Flexbox (coloca o texto e a tabela lado a lado) */
+
 .contato-container {
     display: flex;
-    align-items: center; /* Alinha ambos verticalmente no centro */
-    gap: 20px;           /* Cria um espaço elegante entre o texto e a tabela */
-    flex-wrap: wrap;     /* Responsividade: se a tela for menor, a tabela cai para baixo automaticamente */
+    align-items: center; 
+    gap: 20px;           
+    flex-wrap: wrap;     
 }
 
-/* Garante que o texto e a tabela dividam bem o espaço em telas grandes */
+
 .contato-container p,
 .contato-container table {
-    flex: 1;             /* Faz com que ambos ocupem proporções flexíveis */
-    min-width: 280px;    /* Evita que fiquem espremidos em telas de celular */
+    flex: 1;             
+    min-width: 280px;    
 }
 
 #projetos-atuais {
