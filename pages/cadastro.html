@@ -14,60 +14,67 @@
             ☰
         </button>
         <nav id="menu-opcoes">
-            <a href="../index.html">Início</a>  
-            <a href="projetos.html">Projetos</a>  
-            <a href="cadastro.html">Cadastro</a>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
         </nav>
     </header>
     
-    <form action="/cadastro" method="POST">
-    <fieldset>
+    <form class="form-cadastro" action="/cadastro" method="POST">
+    <fieldset class="grupo-formulario dados-pessoais">
         <legend>Dados Pessoais</legend>
         
-        <div>
+        <div class="campo-formulario campo-nome">
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" placeholder="Seu nome..." required>
         </div>
 
-        <div>
+        <div class="campo-formulario campo-cpf">
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
         </div>
 
-        <div>
-            <label>Gênero:</label>
-            <br>
-            <input type="radio" id="homem" name="genero" value="homem">
-            <label for="homem">Homem</label>
-            <br>
-            <input type="radio" id="mulher" name="genero" value="mulher">
-            <label for="mulher">Mulher</label>
-            <br>
-            <input type="radio" id="outro" name="genero" value="prefiro_nao_informar">
-            <label for="outro">Prefiro não informar</label>
+        <div class="campo-formulario campo-genero">
+            <span class="rotulo-campo">Gênero:</span>
+            <div class="opcoes-genero">
+                <div class="opcao-genero">
+                    <input type="radio" id="homem" name="genero" value="homem">
+                    <label for="homem">Homem</label>
+                </div>
+                <div class="opcao-genero">
+                    <input type="radio" id="mulher" name="genero" value="mulher">
+                    <label for="mulher">Mulher</label>
+                </div>
+                <div class="opcao-genero">
+                    <input type="radio" id="outro" name="genero" value="prefiro_nao_informar">
+                    <label for="outro">Prefiro não informar</label>
+                </div>
+            </div>
         </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="grupo-formulario contato-endereco">
         <legend>Contato e Endereço</legend>
         
-        <div>
+        <div class="campo-formulario campo-email">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="email@dominio.com " required>
         </div>
 
-        <div>
+        <div class="campo-formulario campo-telefone">
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{5}-\d{4}" placeholder="(00) 00000-0000" required>
         </div>
 
-        <div>
+        <div class="campo-formulario campo-cep">
             <label for="cep">CEP:</label>
             <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
         </div>
     </fieldset>
 
-    <button type="submit">Cadastrar</button>
+    <button class="botao-cadastro" type="submit">Cadastrar</button>
 </form>
 <footer>
         <p>&copy; 2026 ONG Ajuda Comunitária. Todos os direitos reservados.</p>
