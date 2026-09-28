@@ -2,58 +2,34 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Início - ONG Ajuda Comunitária</title>
-    <link rel="stylesheet" href="css/style.css" >
-    <script src="js/script.js"></script>
+    <title>ONG Ajuda Comunitária - SPA</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class='nav'>
+    <header class="nav">
         <h1>ONG Ajuda Comunitária</h1>
-        <button id="btn-menu" aria-label="Abrir Menu">
-            ☰
-        </button>
+        <button id="btn-menu" aria-label="Abrir Menu">☰</button>
         <nav id="menu-opcoes">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pages/projetos.html">Projetos</a></li>
-                <li><a href="pages/cadastro.html">Cadastro</a></li>
+                <!-- Usamos atributos de dados para indicar qual rota carregar -->
+                <li><a href="#" data-route="home">Início</a></li>
+                <li><a href="#" data-route="projetos">Projetos</a></li>
+                <li><a href="#" data-route="cadastro">Cadastro</a></li>
             </ul>
         </nav>
-        
     </header>
-    
-    <main>
-        <section id="sobre">
-            <h2>QUEM SOMOS</h2>
-            
-            <img src="img/equipe.jpg" alt="Foto da nossa equipe de voluntários na frente do prédio">
-            
-            <p>Nossa organização atua diariamente para transformar a realidade da nossa comunidade, promovendo educação e acesso à tecnologia para quem mais precisa.</p>
-        </section>
 
-        <section id="contato">
-            <h2>Fale com a gente</h2>
-            <p>Quer ajudar nos nossos projetos ou tem alguma dúvida? Chama a gente nos contatos abaixo:</p>
-            
-            <table class="contato-container">
-                <tr>
-                    <td><strong>Email:</strong></td>
-                    <td><a href="mailto:ongajuda@ong.com.br">ongajuda@ong.com.br</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Telefone/Zap:</strong></td>
-                    <td><a href="tel:+5511987654321">+55 11 987654321</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Endereço:</strong></td>
-                    <td>Centro de Santana de Parnaíba - SP</td>
-                </tr>
-            </table>
-        </section>
+    <!-- O conteúdo dinâmico de cada "página" será injetado aqui pelo JavaScript -->
+    <main id="app-container">
+        <!-- O conteúdo inicial carrega aqui -->
     </main>
 
+    <!-- O rodapé continuará fixo -->
     <footer>
         <p>&copy; 2026 ONG Ajuda Comunitária. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Importação do script principal -->
+    <script src="js/script.js"></script>
 </body>
 </html>
