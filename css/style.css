@@ -430,3 +430,50 @@ footer{
 footer p {
     margin: 0;
 }
+
+.error-message {
+    display: block;
+    min-height: 1.2em;
+    color: #b00020;
+    font-size: 0.95rem;
+}
+
+.form-feedback {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.feedback-erro {
+    border: 1px solid #b00020;
+    background: #fff1f2;
+    color: #8b0019;
+}
+
+.feedback-sucesso {
+    border: 1px solid #1e8f4a;
+    background: #e6ffed;
+    color: #0a3d13;
+}
+
+[aria-invalid="true"] {
+    border-color: #b00020 !important;
+}
+
+/* Feedback messages for form validation */
+.error-message {
+    color: #b00020;
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+.success-message {
+    background: #e6ffed;
+    border: 1px solid #1e8f4a;
+    padding: 10px 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    color: #0a3d13;
+    font-weight: 600;
+}
